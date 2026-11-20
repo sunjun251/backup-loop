@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Backup Loop">
+  <rect width="64" height="64" rx="14" fill="#143429"/>
+  <path d="M8 46 L24 22 L40 46 Z" fill="#2c6750"/>
+  <path d="M28 46 L44 18 L60 46 Z" fill="#4d8a68"/>
+  <circle cx="22" cy="48" r="7" fill="none" stroke="#e2c27a" stroke-width="3"/>
+  <circle cx="36" cy="48" r="7" fill="none" stroke="#f6f1e8" stroke-width="3"/>
+</svg>
