@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/site.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -25,10 +26,13 @@
       </svg>
         <span>Backup Loop<span class="logo-sub">Plan-B campgrounds</span></span>
       </a>
-      <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="nav-toggle-bars"><span></span></span>Menu</button>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
       <a href="index.html">Home</a>
+      <a href="index.html#parks">All parks</a>
       <a href="banff.html">Banff</a>
       <a href="jasper.html">Jasper</a>
+      <a href="index.html#how-to-book">How to book</a>
       <a href="about.html">About</a>
       <a href="disclaimer.html" aria-current="page">Disclaimer</a>
       </nav>
@@ -37,14 +41,17 @@
   <aside class="disclaimer-block" role="note" aria-label="Important disclaimer">
     <h2>Please read before you use this guide</h2>
     <ul>
-      <li>This information is for general planning only and may be out of date. Seasons, fees, fire bans, and site availability change. Verify everything with Parks Canada, Alberta Parks, or the campground before you travel.</li>
-      <li>Backup Loop is not affiliated with, sponsored by, or endorsed by Parks Canada, Alberta Parks, or any campground named on this site.</li>
+      <li>This information is for general planning only and may be out of date. Seasons, fees, fire bans, and site availability change. Verify everything with Parks Canada, the provincial or territorial park agency, or the campground before you travel.</li>
+      <li>Backup Loop is not affiliated with, sponsored by, or endorsed by Parks Canada, any provincial or territorial park agency, or any campground named on this site.</li>
       <li>We do not guarantee availability, prices, open dates, or that a listed option will suit your vehicle or group.</li>
       <li>Follow official park rules, fire bans, wildlife closures, and safety guidance. Camp only in designated, legal sites.</li>
-      <li>Some links are advertisements. As an Amazon Associate I earn from qualifying purchases. Amazon.ca search links on the Banff and Jasper pages are affiliate links; if you click and buy, Backup Loop may earn a commission at no extra cost to you. “Book on Hipcamp” buttons remain placeholders and do not complete a booking.</li>
+      <li>Some links are advertisements. As an Amazon Associate I earn from qualifying purchases. Amazon.ca search links on the park pages are affiliate links; if you click and buy, Backup Loop may earn a commission at no extra cost to you. “Book on Hipcamp” buttons remain placeholders and do not complete a booking.</li>
       <li>Use this site at your own risk. See our <a href="disclaimer.html">full disclaimer and limitation of liability</a>.</li>
     </ul>
   </aside>
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol><li><a href="index.html">Home</a></li><li aria-current="page">Disclaimer</li></ol>
+  </nav>
 
   <header class="page-hero">
     <p class="kicker">Legal</p>
@@ -57,10 +64,10 @@
     <p>The content on Backup Loop is for general planning and information only. It is not a reservation, a permit, professional advice, or an official government publication. It may be incomplete, summarized, or out of date.</p>
 
     <h2>Verify before you travel</h2>
-    <p>Seasons, fees, site counts, first-come rules, overflow policies, fire bans, wildlife closures, road conditions, and booking windows change. Before you travel or rely on any fact, confirm it with Parks Canada, Alberta Parks, or the campground operator, and check current official notices, fire bans, and safety guidance.</p>
+    <p>Seasons, fees, site counts, first-come rules, overflow policies, fire bans, wildlife closures, road conditions, and booking windows change. Before you travel or rely on any fact, confirm it with Parks Canada, the provincial or territorial park agency, or the campground operator, and check current official notices, fire bans, and safety guidance.</p>
 
     <h2>No affiliation or endorsement</h2>
-    <p>Backup Loop is not affiliated with, sponsored by, or endorsed by Parks Canada, the Parks Canada Agency, the Government of Canada, Alberta Parks, the Government of Alberta, or any campground, park, or booking service named or linked on this site. Listing a campground or linking to an official page does not mean that operator approves this site or has reviewed our summary.</p>
+    <p>Backup Loop is not affiliated with, sponsored by, or endorsed by Parks Canada, the Parks Canada Agency, the Government of Canada, Alberta Parks, the Government of Alberta, any other provincial or territorial park agency or government, or any campground, park, or booking service named or linked on this site. Listing a campground or linking to an official page does not mean that operator approves this site or has reviewed our summary.</p>
 
     <h2>No guarantee of availability or prices</h2>
     <p>We do not guarantee that any campground, site, overflow area, or first-come loop will be open, available, accurately described, or suitable for your dates, vehicle, equipment, or group size. We do not guarantee prices, fees, taxes, reservation charges, or pass requirements. Where we mention a fee, it is a figure copied from an official or operator page on the research date and may already be wrong. If a price is unknown or unclear, we say to check the official site — and you should still check even when a figure is shown.</p>
@@ -69,7 +76,7 @@
     <p>You are responsible for following all applicable laws and official rules, including camping only in designated sites, holding required permits and entry or conservation passes, obeying fire bans and fire-permit rules, storing food properly, and respecting wildlife closures and safety directions. In Canadian national parks, camping is generally permitted only in designated areas with a valid camping permit and entry pass. In Banff National Park, official regulations state that camping, including sleeping in a vehicle, is not allowed in roadside pullouts, parking lots, trailheads, and day-use areas. Do not use this site as permission to camp illegally or to ignore a closure.</p>
 
     <h2>Affiliate links and commissions</h2>
-    <p>Backup Loop contains advertising. Some links on the Banff and Jasper pages are Amazon.ca affiliate search links. As an Amazon Associate I earn from qualifying purchases. If you click one of those links and buy something, Backup Loop may earn a commission at no extra cost to you. Those buttons are labelled as Amazon advertisements. We do not claim any specific product, price, or rating.</p>
+    <p>Backup Loop contains advertising. Some links on the park pages are Amazon.ca affiliate search links. As an Amazon Associate I earn from qualifying purchases. If you click one of those links and buy something, Backup Loop may earn a commission at no extra cost to you. Those buttons are labelled as Amazon advertisements. We do not claim any specific product, price, or rating.</p>
     <p>Some other buttons are clearly marked as advertising placeholders and currently point to <code>#affiliate-placeholder</code>. They do not complete a booking. If they are later replaced with live affiliate or referral links, Backup Loop may earn a commission if you click or book through them, at no extra cost to you.</p>
     <p>That material connection is disclosed in the notice at the top of every page, beside the relevant buttons, and here, consistent with Competition Bureau of Canada guidance on influencer and affiliate marketing and, where applicable, the U.S. Federal Trade Commission’s endorsement guides. Official Parks Canada and Alberta Parks links, and other official or operator booking pages, are not affiliate links.</p>
 
@@ -84,6 +91,7 @@
     <p>We may change these terms or the content of the site at any time. The research date on a page, where shown, is not a promise that the page is current after that date.</p>
 
     <p><a href="about.html">About this site</a> · <a href="index.html">Back to the home page</a></p>
+    <a class="back-link" href="index.html#parks">← Back to all parks</a>
   </main>
   <footer class="site-footer">
     <div class="footer-inner">
@@ -96,6 +104,7 @@
           <h2>Pages</h2>
           <ul>
             <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#parks">All parks</a></li>
             <li><a href="banff.html">Banff plan B</a></li>
             <li><a href="jasper.html">Jasper plan B</a></li>
             <li><a href="about.html">About</a></li>
@@ -105,13 +114,13 @@
         <div>
           <h2>Legal</h2>
           <ul>
-            <li>Not affiliated with Parks Canada or Alberta Parks.</li>
+            <li>Not affiliated with Parks Canada or any provincial or territorial park agency.</li>
             <li>As an Amazon Associate I earn from qualifying purchases.</li>
             <li><a href="disclaimer.html">Full disclaimer</a></li>
           </ul>
         </div>
       </div>
-      <p class="footer-fine">© 2026 Backup Loop. Research cited on each page was checked on 19 November 2026. Always confirm current rules and availability with the official operator before you travel.</p>
+      <p class="footer-fine">© 2026 Backup Loop. Each park page shows the date its research was checked. Always confirm current rules and availability with the official operator before you travel.</p>
     </div>
   </footer>
 </body>

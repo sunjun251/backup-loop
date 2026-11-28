@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Backup Loop — Plan-B campgrounds when the parks are full</title>
-  <meta name="description" content="Independent guide to legal backup campgrounds when Banff, Jasper and other Canadian national park campgrounds are sold out.">
+  <title>Backup Loop — plan-B campgrounds for Canadian national parks</title>
+  <meta name="description" content="Independent plan-B guide to legal backup campgrounds when Canadian national park campgrounds are sold out. Search every park by name or province.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/site.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -25,10 +26,13 @@
       </svg>
         <span>Backup Loop<span class="logo-sub">Plan-B campgrounds</span></span>
       </a>
-      <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="nav-toggle-bars"><span></span></span>Menu</button>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
       <a href="index.html" aria-current="page">Home</a>
+      <a href="index.html#parks">All parks</a>
       <a href="banff.html">Banff</a>
       <a href="jasper.html">Jasper</a>
+      <a href="index.html#how-to-book">How to book</a>
       <a href="about.html">About</a>
       <a href="disclaimer.html">Disclaimer</a>
       </nav>
@@ -37,24 +41,23 @@
   <aside class="disclaimer-block" role="note" aria-label="Important disclaimer">
     <h2>Please read before you use this guide</h2>
     <ul>
-      <li>This information is for general planning only and may be out of date. Seasons, fees, fire bans, and site availability change. Verify everything with Parks Canada, Alberta Parks, or the campground before you travel.</li>
-      <li>Backup Loop is not affiliated with, sponsored by, or endorsed by Parks Canada, Alberta Parks, or any campground named on this site.</li>
+      <li>This information is for general planning only and may be out of date. Seasons, fees, fire bans, and site availability change. Verify everything with Parks Canada, the provincial or territorial park agency, or the campground before you travel.</li>
+      <li>Backup Loop is not affiliated with, sponsored by, or endorsed by Parks Canada, any provincial or territorial park agency, or any campground named on this site.</li>
       <li>We do not guarantee availability, prices, open dates, or that a listed option will suit your vehicle or group.</li>
       <li>Follow official park rules, fire bans, wildlife closures, and safety guidance. Camp only in designated, legal sites.</li>
-      <li>Some links are advertisements. As an Amazon Associate I earn from qualifying purchases. Amazon.ca search links on the Banff and Jasper pages are affiliate links; if you click and buy, Backup Loop may earn a commission at no extra cost to you. “Book on Hipcamp” buttons remain placeholders and do not complete a booking.</li>
+      <li>Some links are advertisements. As an Amazon Associate I earn from qualifying purchases. Amazon.ca search links on the park pages are affiliate links; if you click and buy, Backup Loop may earn a commission at no extra cost to you. “Book on Hipcamp” buttons remain placeholders and do not complete a booking.</li>
       <li>Use this site at your own risk. See our <a href="disclaimer.html">full disclaimer and limitation of liability</a>.</li>
     </ul>
   </aside>
-
   <section class="hero">
     <div class="hero-grid">
       <div>
         <p class="eyebrow">When the reservation grid is all red</p>
         <h1>The park is full. You still need a legal place to sleep.</h1>
-        <p class="lede">Backup Loop is an independent plan-B guide for nights when Banff, Jasper, and other popular Canadian national park campgrounds are sold out. We point you to first-come sites, official overflow where it exists, and nearby provincial or private campgrounds — never to illegal roadside camping.</p>
+        <p class="lede">Backup Loop is an independent plan-B guide for nights when Canadian national park campgrounds are sold out. We point you to first-come sites, official overflow where it exists, and nearby provincial or private campgrounds — never to illegal roadside camping.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="banff.html">Banff plan B</a>
-          <a class="btn btn-ghost" href="jasper.html">Jasper plan B</a>
+          <a class="btn btn-primary" href="#parks">Find your park</a>
+          <a class="btn btn-ghost" href="#how-to-book">How booking works</a>
         </div>
       </div>
       <div class="hero-art">
@@ -87,47 +90,93 @@
       </div>
     </div>
   </section>
-
   <main id="main">
-    <section class="section wrap">
-      <p class="kicker">What this site does</p>
-      <h2>A clear next step, not a copy of the official grid</h2>
-      <p>Parks Canada reservations for busy parks often sell out on launch morning. This sample site is built around that moment: you missed Tunnel Mountain or Whistlers, and you still want to be in the mountains legally. Each park page lists reservable national park campgrounds, the first-come or overflow options Parks Canada actually describes, then bookable provincial and private alternatives just outside the park.</p>
-      <p>We cite official sources on every page, we do not invent prices, and we never suggest camping in a random pullout, parking lot, or closed area. This is an example directory. Facts were researched on 19 November 2026 and can change.</p>
+    <section class="section wrap" id="parks">
+      <p class="kicker">10 park guides</p>
+      <h2>Find the park you meant to book</h2>
+      <p>Search by park, town or campground name, or filter by province or territory. Each guide lists what Parks Canada says about in-park camping, then legal backups nearby, with links to the official pages.</p>
+      <form class="filter-bar" role="search" onsubmit="return false">
+        <div>
+          <label for="park-search">Search parks</label>
+          <input id="park-search" type="search" placeholder="Try “Tofino”, “Cabot Trail” or “Yoho”" autocomplete="off">
+        </div>
+        <div>
+          <label for="park-province">Province or territory</label>
+          <select id="park-province"><option value="">All of Canada</option><option value="BC">British Columbia</option><option value="AB">Alberta</option></select>
+        </div>
+      </form>
+      <ul class="province-jump" aria-label="Jump to a province"><li><a href="index.html?prov=BC#parks">British Columbia</a></li><li><a href="index.html?prov=AB#parks">Alberta</a></li></ul>
+      <p class="filter-status" id="filter-status" aria-live="polite">10 parks</p>
+      <div class="card-grid park-grid">
+        <article class="card park-card" data-park data-prov="BC" data-search="Glacier National Park Rogers Pass Illecillewaet Loop Brook Golden Revelstoke">
+          <div class="pill-row"><span class="pill">British Columbia</span></div>
+          <h3><a href="glacier.html">Glacier National Park</a></h3>
+          <p>Parks Canada keeps about half of Illecillewaet’s sites first-come. Snowforest in Mount Revelstoke, and Martha Creek and Blanket Creek near Revelstoke, are the next legal options.</p>
+          <a class="btn btn-secondary" href="glacier.html">Open the Glacier guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="BC" data-search="Gulf Islands National Park Reserve Sidney Pender Saturna Salt Spring Galiano McDonald SMONEĆTEN Prior Centennial Sidney Spit kayak">
+          <div class="pill-row"><span class="pill">British Columbia</span><span class="pill pill-muted">Park reserve</span></div>
+          <h3><a href="gulf-islands.html">Gulf Islands National Park Reserve</a></h3>
+          <p>Frontcountry campgrounds run 15 May to 30 September. Several boat-access sites are first-come. Ruckle on Salt Spring and Montague Harbour on Galiano are provincial backups.</p>
+          <a class="btn btn-secondary" href="gulf-islands.html">Open the Gulf Islands guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="BC" data-search="Kootenay National Park Radium Hot Springs Redstreak McLeod Meadows Marble Canyon Invermere Dry Gulch">
+          <div class="pill-row"><span class="pill">British Columbia</span></div>
+          <h3><a href="kootenay.html">Kootenay National Park</a></h3>
+          <p>Every Kootenay frontcountry site is reservable, so there is no walk-up option. Dry Gulch Provincial Park, 5 km south of Radium, and Yoho’s Hoodoo Creek are the closest legal backups.</p>
+          <a class="btn btn-secondary" href="kootenay.html">Open the Kootenay guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="BC" data-search="Mount Revelstoke National Park Revelstoke Snowforest Meadows in the Sky Martha Creek Blanket Creek">
+          <div class="pill-row"><span class="pill">British Columbia</span></div>
+          <h3><a href="mount-revelstoke.html">Mount Revelstoke National Park</a></h3>
+          <p>Snowforest is the park’s only frontcountry campground and most sites are reservable. Martha Creek and Blanket Creek provincial parks, and Glacier National Park, are the backups.</p>
+          <a class="btn btn-secondary" href="mount-revelstoke.html">Open the Mount Revelstoke guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="BC" data-search="Pacific Rim National Park Reserve Tofino Ucluelet Long Beach Green Point West Coast Trail Broken Group Vancouver Island">
+          <div class="pill-row"><span class="pill">British Columbia</span><span class="pill pill-muted">Park reserve</span></div>
+          <h3><a href="pacific-rim.html">Pacific Rim National Park Reserve</a></h3>
+          <p>Green Point is the only campground in the Long Beach area and Parks Canada recommends reservations. When it is full, Parks Canada points to commercial campgrounds in Tofino and Ucluelet.</p>
+          <a class="btn btn-secondary" href="pacific-rim.html">Open the Pacific Rim guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="BC" data-search="Yoho National Park Field Golden Kicking Horse Emerald Lake Takakkaw Lake O&#x27;Hara Hoodoo Creek Monarch">
+          <div class="pill-row"><span class="pill">British Columbia</span></div>
+          <h3><a href="yoho.html">Yoho National Park</a></h3>
+          <p>Four campgrounds, and Hoodoo Creek is first-come only. Monarch goes first-come in the shoulder season. Beyond that, look to Glacier National Park, Golden or the Banff page.</p>
+          <a class="btn btn-secondary" href="yoho.html">Open the Yoho guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="AB" data-search="Banff National Park Lake Louise Icefields Parkway Canmore Kananaskis Bow Valley Tunnel Mountain">
+          <div class="pill-row"><span class="pill">Alberta</span></div>
+          <h3><a href="banff.html">Banff National Park</a></h3>
+          <p>When Tunnel Mountain, Two Jack or Lake Louise are sold out: the Icefields Parkway first-come campgrounds Parks Canada listed for 2026, then Bow Valley Provincial Park and private sites in Kananaskis.</p>
+          <a class="btn btn-secondary" href="banff.html">Open the Banff guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="AB" data-search="Elk Island National Park Edmonton Astotin Lake Miquelon Lake Vermilion Lamont bison">
+          <div class="pill-row"><span class="pill">Alberta</span></div>
+          <h3><a href="elk-island.html">Elk Island National Park</a></h3>
+          <p>Astotin Lake is the only frontcountry campground, less than an hour east of Edmonton. Parks Canada itself names Miquelon Lake and Vermilion provincial parks as nearby camping.</p>
+          <a class="btn btn-secondary" href="elk-island.html">Open the Elk Island guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="AB" data-search="Jasper National Park Whistlers Wapiti Hinton Icefields Parkway overflow">
+          <div class="pill-row"><span class="pill">Alberta</span></div>
+          <h3><a href="jasper.html">Jasper National Park</a></h3>
+          <p>Whistlers and Wapiti book out. Jasper’s Overflow campground is reservable, not a walk-up lot. Several Icefields Parkway campgrounds were first-come in 2026. Hinton-area parks are the usual plan B.</p>
+          <a class="btn btn-secondary" href="jasper.html">Open the Jasper guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="AB" data-search="Waterton Lakes National Park Townsite Belly River Crandell Pincher Creek Castle Beauvais">
+          <div class="pill-row"><span class="pill">Alberta</span></div>
+          <h3><a href="waterton.html">Waterton Lakes National Park</a></h3>
+          <p>Crandell Mountain is closed, so most campers chase Townsite sites. Townsite is first-come only in spring and fall. Castle and Beauvais Lake provincial parks are the backups.</p>
+          <a class="btn btn-secondary" href="waterton.html">Open the Waterton guide</a>
+        </article>
+      </div>
+      <p class="no-results callout" id="no-results">No parks match that search. Clear the search box or choose “All of Canada”.</p>
     </section>
-
     <section class="section wrap">
       <div class="callout callout-danger">
         <h2>Camp only in designated sites</h2>
         <p>In Canada’s national parks, camping is permitted in designated areas only, with a valid national park camping permit and a national park entry pass. Parks Canada’s Banff regulations state that camping — including sleeping in a vehicle — is not allowed in roadside pullouts, parking lots, trailheads, or day-use areas. “Random camping” in Banff’s backcountry is a separate, permit-only activity in designated areas, not a last-minute overflow option. If the park is full, go to a legal alternative listed here, or a hotel, hostel, or other booked lodging — do not camp illegally inside the park.</p>
       </div>
     </section>
-
-    <section class="section wrap" id="parks">
-      <p class="kicker">Park guides</p>
-      <h2>Start with the park you meant to book</h2>
-      <div class="card-grid">
-        <article class="card">
-          <span class="pill">Sample page</span>
-          <h3>Banff National Park</h3>
-          <p>When Tunnel Mountain, Two Jack, Johnston Canyon, or Lake Louise are sold out, look at the two Icefields Parkway first-come campgrounds Parks Canada listed for 2026, then Bow Valley Provincial Park and private sites in Kananaskis.</p>
-          <a class="btn btn-secondary" href="banff.html">Open the Banff guide</a>
-        </article>
-        <article class="card">
-          <span class="pill">Sample page</span>
-          <h3>Jasper National Park</h3>
-          <p>Whistlers and Wapiti book out. Jasper’s Overflow campground is reservable, not a walk-up lot. Several Icefields Parkway campgrounds were first-come in 2026. Hinton-area provincial and private parks are the usual plan B east of the gate.</p>
-          <a class="btn btn-secondary" href="jasper.html">Open the Jasper guide</a>
-        </article>
-        <article class="card">
-          <span class="pill pill-muted">Coming next</span>
-          <h3>Yoho, Kootenay, Waterton</h3>
-          <p>Nearby national parks can be a legal plan B when Banff is full. Parks Canada’s 2027 calendar opens Yoho’s Kicking Horse and Monarch campgrounds on Tuesday, 19 January 2027 at 8 a.m. Mountain Time. Full pages are not in this example yet.</p>
-          <a class="btn btn-outline" href="https://parks.canada.ca/voyage-travel/reserve" rel="noopener">Parks Canada launch dates</a>
-        </article>
-      </div>
-    </section>
-
     <section class="section wrap" id="how-to-book">
       <p class="kicker">How to book</p>
       <h2>Win the launch, then keep a backup list</h2>
@@ -164,17 +213,16 @@
         </article>
       </div>
     </section>
-
     <section class="section wrap" id="affiliate">
       <p class="kicker">Bookings and disclosure</p>
       <h2>Official links first, then clearly marked ads</h2>
-      <p>Park and provincial campgrounds should be booked on the official reservation sites. Private land and some alternative stays may later be booked through partners such as Hipcamp. The Hipcamp button below is a placeholder only — it does not go to a live booking program. Amazon.ca gear-search links on the Banff and Jasper pages are live affiliate advertisements.</p>
+      <p>Park and provincial campgrounds should be booked on the official reservation sites. Private land and some alternative stays may later be booked through partners such as Hipcamp. The Hipcamp button below is a placeholder only — it does not go to a live booking program. Amazon.ca gear-search links on the park pages are live affiliate advertisements.</p>
       <div class="btn-row">
         <a class="btn btn-secondary" href="https://reservation.pc.gc.ca/" rel="noopener">Book on Parks Canada</a>
         <a class="btn btn-outline" href="https://www.albertaparks.ca/reservations/" rel="noopener">Book on Alberta Parks</a>
         <a class="btn btn-affiliate" href="#affiliate-placeholder">Book on Hipcamp <span class="badge">Ad · Placeholder</span></a>
       </div>
-      <p class="meta" style="margin-top:1rem;"><strong>Advertising disclosure.</strong> As an Amazon Associate I earn from qualifying purchases. Live Amazon.ca affiliate search links appear on the Banff and Jasper plan-B pages; if you click and buy, Backup Loop may earn a commission at no extra cost to you. The “Book on Hipcamp” buttons on this page are still placeholders only. That material connection is disclosed under Canada’s Competition Bureau guidance on influencer and affiliate marketing, and under the U.S. FTC’s endorsement guides where they apply. Official Parks Canada and Alberta Parks links are not affiliate links. <a href="about.html">Read the full disclosure</a>.</p>
+      <p class="meta" style="margin-top:1rem;"><strong>Advertising disclosure.</strong> As an Amazon Associate I earn from qualifying purchases. Live Amazon.ca affiliate search links appear on the park plan-B pages; if you click and buy, Backup Loop may earn a commission at no extra cost to you. The “Book on Hipcamp” buttons on this page are still placeholders only. That material connection is disclosed under Canada’s Competition Bureau guidance on influencer and affiliate marketing, and under the U.S. FTC’s endorsement guides where they apply. Official Parks Canada and Alberta Parks links are not affiliate links. <a href="about.html">Read the full disclosure</a>.</p>
     </section>
   </main>
   <footer class="site-footer">
@@ -188,6 +236,7 @@
           <h2>Pages</h2>
           <ul>
             <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#parks">All parks</a></li>
             <li><a href="banff.html">Banff plan B</a></li>
             <li><a href="jasper.html">Jasper plan B</a></li>
             <li><a href="about.html">About</a></li>
@@ -197,13 +246,13 @@
         <div>
           <h2>Legal</h2>
           <ul>
-            <li>Not affiliated with Parks Canada or Alberta Parks.</li>
+            <li>Not affiliated with Parks Canada or any provincial or territorial park agency.</li>
             <li>As an Amazon Associate I earn from qualifying purchases.</li>
             <li><a href="disclaimer.html">Full disclaimer</a></li>
           </ul>
         </div>
       </div>
-      <p class="footer-fine">© 2026 Backup Loop. Research cited on each page was checked on 19 November 2026. Always confirm current rules and availability with the official operator before you travel.</p>
+      <p class="footer-fine">© 2026 Backup Loop. Each park page shows the date its research was checked. Always confirm current rules and availability with the official operator before you travel.</p>
     </div>
   </footer>
 </body>

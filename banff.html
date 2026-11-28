@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/site.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -25,10 +26,13 @@
       </svg>
         <span>Backup Loop<span class="logo-sub">Plan-B campgrounds</span></span>
       </a>
-      <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="nav-toggle-bars"><span></span></span>Menu</button>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
       <a href="index.html">Home</a>
+      <a href="index.html#parks">All parks</a>
       <a href="banff.html" aria-current="page">Banff</a>
       <a href="jasper.html">Jasper</a>
+      <a href="index.html#how-to-book">How to book</a>
       <a href="about.html">About</a>
       <a href="disclaimer.html">Disclaimer</a>
       </nav>
@@ -37,14 +41,17 @@
   <aside class="disclaimer-block" role="note" aria-label="Important disclaimer">
     <h2>Please read before you use this guide</h2>
     <ul>
-      <li>This information is for general planning only and may be out of date. Seasons, fees, fire bans, and site availability change. Verify everything with Parks Canada, Alberta Parks, or the campground before you travel.</li>
-      <li>Backup Loop is not affiliated with, sponsored by, or endorsed by Parks Canada, Alberta Parks, or any campground named on this site.</li>
+      <li>This information is for general planning only and may be out of date. Seasons, fees, fire bans, and site availability change. Verify everything with Parks Canada, the provincial or territorial park agency, or the campground before you travel.</li>
+      <li>Backup Loop is not affiliated with, sponsored by, or endorsed by Parks Canada, any provincial or territorial park agency, or any campground named on this site.</li>
       <li>We do not guarantee availability, prices, open dates, or that a listed option will suit your vehicle or group.</li>
       <li>Follow official park rules, fire bans, wildlife closures, and safety guidance. Camp only in designated, legal sites.</li>
-      <li>Some links are advertisements. As an Amazon Associate I earn from qualifying purchases. Amazon.ca search links on the Banff and Jasper pages are affiliate links; if you click and buy, Backup Loop may earn a commission at no extra cost to you. “Book on Hipcamp” buttons remain placeholders and do not complete a booking.</li>
+      <li>Some links are advertisements. As an Amazon Associate I earn from qualifying purchases. Amazon.ca search links on the park pages are affiliate links; if you click and buy, Backup Loop may earn a commission at no extra cost to you. “Book on Hipcamp” buttons remain placeholders and do not complete a booking.</li>
       <li>Use this site at your own risk. See our <a href="disclaimer.html">full disclaimer and limitation of liability</a>.</li>
     </ul>
   </aside>
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol><li><a href="index.html">Home</a></li><li><a href="index.html#parks">All parks</a></li><li><a href="index.html?prov=AB#parks">Alberta</a></li><li aria-current="page">Banff National Park</li></ol>
+  </nav>
 
   <header class="page-hero">
     <p class="kicker">Banff National Park · Alberta</p>
@@ -359,6 +366,7 @@
       </ol>
       <p class="meta">Unverified or incomplete items are flagged in the text: Lake Louise overflow operations, Willow Rock power-site price, 2027 first-come status, and all approximate drive times.</p>
     </section>
+    <a class="back-link" href="index.html#parks">← Back to all parks</a>
   </main>
   <footer class="site-footer">
     <div class="footer-inner">
@@ -371,6 +379,7 @@
           <h2>Pages</h2>
           <ul>
             <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#parks">All parks</a></li>
             <li><a href="banff.html">Banff plan B</a></li>
             <li><a href="jasper.html">Jasper plan B</a></li>
             <li><a href="about.html">About</a></li>
@@ -380,13 +389,13 @@
         <div>
           <h2>Legal</h2>
           <ul>
-            <li>Not affiliated with Parks Canada or Alberta Parks.</li>
+            <li>Not affiliated with Parks Canada or any provincial or territorial park agency.</li>
             <li>As an Amazon Associate I earn from qualifying purchases.</li>
             <li><a href="disclaimer.html">Full disclaimer</a></li>
           </ul>
         </div>
       </div>
-      <p class="footer-fine">© 2026 Backup Loop. Research cited on each page was checked on 19 November 2026. Always confirm current rules and availability with the official operator before you travel.</p>
+      <p class="footer-fine">© 2026 Backup Loop. Each park page shows the date its research was checked. Always confirm current rules and availability with the official operator before you travel.</p>
     </div>
   </footer>
 </body>
