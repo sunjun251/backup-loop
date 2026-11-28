@@ -92,7 +92,7 @@
   </section>
   <main id="main">
     <section class="section wrap" id="parks">
-      <p class="kicker">18 park guides</p>
+      <p class="kicker">28 park guides</p>
       <h2>Find the park you meant to book</h2>
       <p>Search by park, town or campground name, or filter by province or territory. Each guide lists what Parks Canada says about in-park camping, then legal backups nearby, with links to the official pages.</p>
       <form class="filter-bar" role="search" onsubmit="return false">
@@ -102,11 +102,11 @@
         </div>
         <div>
           <label for="park-province">Province or territory</label>
-          <select id="park-province"><option value="">All of Canada</option><option value="BC">British Columbia</option><option value="AB">Alberta</option><option value="SK">Saskatchewan</option><option value="MB">Manitoba</option><option value="ON">Ontario</option></select>
+          <select id="park-province"><option value="">All of Canada</option><option value="BC">British Columbia</option><option value="AB">Alberta</option><option value="SK">Saskatchewan</option><option value="MB">Manitoba</option><option value="ON">Ontario</option><option value="QC">Quebec</option><option value="NB">New Brunswick</option><option value="NS">Nova Scotia</option><option value="PE">Prince Edward Island</option><option value="NL">Newfoundland and Labrador</option></select>
         </div>
       </form>
-      <ul class="province-jump" aria-label="Jump to a province"><li><a href="index.html?prov=BC#parks">British Columbia</a></li><li><a href="index.html?prov=AB#parks">Alberta</a></li><li><a href="index.html?prov=SK#parks">Saskatchewan</a></li><li><a href="index.html?prov=MB#parks">Manitoba</a></li><li><a href="index.html?prov=ON#parks">Ontario</a></li></ul>
-      <p class="filter-status" id="filter-status" aria-live="polite">18 parks</p>
+      <ul class="province-jump" aria-label="Jump to a province"><li><a href="index.html?prov=BC#parks">British Columbia</a></li><li><a href="index.html?prov=AB#parks">Alberta</a></li><li><a href="index.html?prov=SK#parks">Saskatchewan</a></li><li><a href="index.html?prov=MB#parks">Manitoba</a></li><li><a href="index.html?prov=ON#parks">Ontario</a></li><li><a href="index.html?prov=QC#parks">Quebec</a></li><li><a href="index.html?prov=NB#parks">New Brunswick</a></li><li><a href="index.html?prov=NS#parks">Nova Scotia</a></li><li><a href="index.html?prov=PE#parks">Prince Edward Island</a></li><li><a href="index.html?prov=NL#parks">Newfoundland and Labrador</a></li></ul>
+      <p class="filter-status" id="filter-status" aria-live="polite">28 parks</p>
       <div class="card-grid park-grid">
         <article class="card park-card" data-park data-prov="BC" data-search="Glacier National Park Rogers Pass Illecillewaet Loop Brook Golden Revelstoke">
           <div class="pill-row"><span class="pill">British Columbia</span></div>
@@ -215,6 +215,66 @@
           <h3><a href="thousand-islands.html">Thousand Islands National Park</a></h3>
           <p>Island camping is boat-only, with 28 reservable and 32 first-come sites. The mainland has only oTENTiks. Charleston Lake Provincial Park is the land backup.</p>
           <a class="btn btn-secondary" href="thousand-islands.html">Open the Thousand Islands guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="QC" data-search="Forillon National Park Gaspé Gaspésie Petit-Gaspé Des-Rosiers Cap-Bon-Ami">
+          <div class="pill-row"><span class="pill">Quebec</span></div>
+          <h3><a href="forillon.html">Forillon National Park</a></h3>
+          <p>Parks Canada says 100% of Forillon’s sites are reservable, and first-come use only happens when sites happen to be free. Book ahead or line up a private campground near Gaspé.</p>
+          <a class="btn btn-secondary" href="forillon.html">Open the Forillon guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="QC" data-search="La Mauricie National Park Shawinigan Saint-Jean-des-Piles Rivière-à-la-Pêche Wapizagonke Mistagance canoe camping">
+          <div class="pill-row"><span class="pill">Quebec</span></div>
+          <h3><a href="la-mauricie.html">La Mauricie National Park</a></h3>
+          <p>Three semi-serviced campgrounds, Rivière-à-la-Pêche, Wapizagonke and Mistagance, are on the reservation system, plus canoe camping. Book on launch day.</p>
+          <a class="btn btn-secondary" href="la-mauricie.html">Open the La Mauricie guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="QC" data-search="Mingan Archipelago National Park Reserve Havre-Saint-Pierre Longue-Pointe-de-Mingan Côte-Nord islands monoliths Île Quarry Île Niapiskau">
+          <div class="pill-row"><span class="pill">Quebec</span><span class="pill pill-muted">Park reserve</span></div>
+          <h3><a href="mingan.html">Mingan Archipelago National Park Reserve</a></h3>
+          <p>Thirty undeveloped campgrounds on six islands, reached only by boat, open mid-June to mid-September. Anse des Noyés is closed until further notice.</p>
+          <a class="btn btn-secondary" href="mingan.html">Open the Mingan guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="NB" data-search="Fundy National Park Alma Bay of Fundy Headquarters Chignecto Point Wolfe Cannontown Lakeview">
+          <div class="pill-row"><span class="pill">New Brunswick</span></div>
+          <h3><a href="fundy.html">Fundy National Park</a></h3>
+          <p>Five frontcountry campgrounds, all on the reservation system, plus oTENTiks, yurts and rustic cabins. Fundy Highlands Motel and Chalets operates inside the park.</p>
+          <a class="btn btn-secondary" href="fundy.html">Open the Fundy guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="NB" data-search="Kouchibouguac National Park Kellys Beach South Kouchibouguac Côte-à-Fabien Shediac Parlee Beach Acadian coast">
+          <div class="pill-row"><span class="pill">New Brunswick</span></div>
+          <h3><a href="kouchibouguac.html">Kouchibouguac National Park</a></h3>
+          <p>South Kouchibouguac has 311 reservable sites; Côte-à-Fabien is the smaller second campground. Parlee Beach Provincial Park has a 210-plus-site campground as a backup.</p>
+          <a class="btn btn-secondary" href="kouchibouguac.html">Open the Kouchibouguac guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="NS" data-search="Cape Breton Highlands National Park Cabot Trail Chéticamp Ingonish Pleasant Bay Cape North Broad Cove Corney Brook Big Intervale">
+          <div class="pill-row"><span class="pill">Nova Scotia</span></div>
+          <h3><a href="cape-breton-highlands.html">Cape Breton Highlands National Park</a></h3>
+          <p>Chéticamp, Ingonish Beach, Broad Cove and Mkwesaqtuk/Cap-Rouge are reservable. Parks Canada says all other campgrounds are first-come, including tiny Corney Brook and Big Intervale.</p>
+          <a class="btn btn-secondary" href="cape-breton-highlands.html">Open the Cape Breton Highlands guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="NS" data-search="Kejimkujik National Park Keji Jeremy&#x27;s Bay Jakes Landing Seaside Thomas Raddall Maitland Bridge dark sky">
+          <div class="pill-row"><span class="pill">Nova Scotia</span></div>
+          <h3><a href="kejimkujik.html">Kejimkujik National Park</a></h3>
+          <p>Jeremy’s Bay is the main campground. Keji Seaside is day-use only, and Parks Canada points campers to nearby Thomas Raddall Provincial Park.</p>
+          <a class="btn btn-secondary" href="kejimkujik.html">Open the Kejimkujik guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="PE" data-search="Prince Edward Island National Park Cavendish Stanhope Green Gables Kensington Cabot Beach North Shore">
+          <div class="pill-row"><span class="pill">Prince Edward Island</span></div>
+          <h3><a href="prince-edward-island.html">Prince Edward Island National Park</a></h3>
+          <p>Cavendish and Stanhope are the two campgrounds, both reservable. Cabot Beach Provincial Park, 15 minutes from Kensington, has a 104-site provincial campground.</p>
+          <a class="btn btn-secondary" href="prince-edward-island.html">Open the PEI guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="NL" data-search="Gros Morne National Park Rocky Harbour Woody Point Berry Hill Green Point Shallow Bay Trout River Lomond Bay of Islands">
+          <div class="pill-row"><span class="pill">Newfoundland and Labrador</span></div>
+          <h3><a href="gros-morne.html">Gros Morne National Park</a></h3>
+          <p>Five campgrounds: Berry Hill, Green Point, Shallow Bay, Trout River Pond and Lomond, all on the reservation calendar. Blow Me Down Provincial Park is a provincial backup.</p>
+          <a class="btn btn-secondary" href="gros-morne.html">Open the Gros Morne guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="NL" data-search="Terra Nova National Park Newman Sound Malady Head Glovertown Trinity Bonavista Lockston Path">
+          <div class="pill-row"><span class="pill">Newfoundland and Labrador</span></div>
+          <h3><a href="terra-nova.html">Terra Nova National Park</a></h3>
+          <p>Newman Sound and Malady Head are the campgrounds, with long-term Newman Sound loops booked a day earlier. Lockston Path and Notre Dame provincial parks are backups.</p>
+          <a class="btn btn-secondary" href="terra-nova.html">Open the Terra Nova guide</a>
         </article>
       </div>
       <p class="no-results callout" id="no-results">No parks match that search. Clear the search box or choose “All of Canada”.</p>
