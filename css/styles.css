@@ -475,3 +475,11 @@ tr:nth-child(even) td { background: rgba(247, 243, 232, 0.6); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* Amazon gear ads */
+.gear-grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.gear-grid .card p { font-size: 0.95rem; }
+.gear-grid .btn { width: 100%; text-align: center; }
+#gear { margin-top: 2.2rem; }
