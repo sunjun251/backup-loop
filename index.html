@@ -92,7 +92,7 @@
   </section>
   <main id="main">
     <section class="section wrap" id="parks">
-      <p class="kicker">10 park guides</p>
+      <p class="kicker">18 park guides</p>
       <h2>Find the park you meant to book</h2>
       <p>Search by park, town or campground name, or filter by province or territory. Each guide lists what Parks Canada says about in-park camping, then legal backups nearby, with links to the official pages.</p>
       <form class="filter-bar" role="search" onsubmit="return false">
@@ -102,11 +102,11 @@
         </div>
         <div>
           <label for="park-province">Province or territory</label>
-          <select id="park-province"><option value="">All of Canada</option><option value="BC">British Columbia</option><option value="AB">Alberta</option></select>
+          <select id="park-province"><option value="">All of Canada</option><option value="BC">British Columbia</option><option value="AB">Alberta</option><option value="SK">Saskatchewan</option><option value="MB">Manitoba</option><option value="ON">Ontario</option></select>
         </div>
       </form>
-      <ul class="province-jump" aria-label="Jump to a province"><li><a href="index.html?prov=BC#parks">British Columbia</a></li><li><a href="index.html?prov=AB#parks">Alberta</a></li></ul>
-      <p class="filter-status" id="filter-status" aria-live="polite">10 parks</p>
+      <ul class="province-jump" aria-label="Jump to a province"><li><a href="index.html?prov=BC#parks">British Columbia</a></li><li><a href="index.html?prov=AB#parks">Alberta</a></li><li><a href="index.html?prov=SK#parks">Saskatchewan</a></li><li><a href="index.html?prov=MB#parks">Manitoba</a></li><li><a href="index.html?prov=ON#parks">Ontario</a></li></ul>
+      <p class="filter-status" id="filter-status" aria-live="polite">18 parks</p>
       <div class="card-grid park-grid">
         <article class="card park-card" data-park data-prov="BC" data-search="Glacier National Park Rogers Pass Illecillewaet Loop Brook Golden Revelstoke">
           <div class="pill-row"><span class="pill">British Columbia</span></div>
@@ -167,6 +167,54 @@
           <h3><a href="waterton.html">Waterton Lakes National Park</a></h3>
           <p>Crandell Mountain is closed, so most campers chase Townsite sites. Townsite is first-come only in spring and fall. Castle and Beauvais Lake provincial parks are the backups.</p>
           <a class="btn btn-secondary" href="waterton.html">Open the Waterton guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="SK" data-search="Grasslands National Park Val Marie Frenchman Valley Rock Creek East Block West Block dark sky bison">
+          <div class="pill-row"><span class="pill">Saskatchewan</span></div>
+          <h3><a href="grasslands.html">Grasslands National Park</a></h3>
+          <p>Two reservable campgrounds in two blocks that are 166 km apart. Check which block you booked, bring water in shoulder season, and watch for fire bans.</p>
+          <a class="btn btn-secondary" href="grasslands.html">Open the Grasslands guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="SK" data-search="Prince Albert National Park Waskesiu Beaver Glen Red Deer Narrows Namekus Sandy Lake">
+          <div class="pill-row"><span class="pill">Saskatchewan</span></div>
+          <h3><a href="prince-albert.html">Prince Albert National Park</a></h3>
+          <p>Beaver Glen and Red Deer are reservable. Parks Canada lists Narrows, Sandy Lake and Namekus Lake as non-reservable, so there are in-park first-come options.</p>
+          <a class="btn btn-secondary" href="prince-albert.html">Open the Prince Albert guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="MB" data-search="Riding Mountain National Park Wasagaming Clear Lake Dauphin Moon Lake Lake Audy Whirlpool Deep Lake">
+          <div class="pill-row"><span class="pill">Manitoba</span></div>
+          <h3><a href="riding-mountain.html">Riding Mountain National Park</a></h3>
+          <p>Wasagaming has 446 reservable sites. When it is full, Parks Canada lists four self-registration, first-come campgrounds: Moon Lake, Lake Audy, Whirlpool Lake and Deep Lake.</p>
+          <a class="btn btn-secondary" href="riding-mountain.html">Open the Riding Mountain guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="ON" data-search="Bruce Peninsula National Park Tobermory Cyprus Lake Grotto Flowerpot Fathom Five Sauble MacGregor">
+          <div class="pill-row"><span class="pill">Ontario</span></div>
+          <h3><a href="bruce-peninsula.html">Bruce Peninsula National Park</a></h3>
+          <p>Parks Canada says reservations are required May through October at Cyprus Lake, so there is no walk-up. Sauble Falls and MacGregor Point provincial parks are the backups.</p>
+          <a class="btn btn-secondary" href="bruce-peninsula.html">Open the Bruce Peninsula guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="ON" data-search="Georgian Bay Islands National Park Beausoleil Island Honey Harbour Cedar Spring Christian Beach Awenda Six Mile Lake boat">
+          <div class="pill-row"><span class="pill">Ontario</span></div>
+          <h3><a href="georgian-bay-islands.html">Georgian Bay Islands National Park</a></h3>
+          <p>Every campsite is on an island reached only by boat. When Cedar Spring is full, Awenda and Six Mile Lake provincial parks are mainland backups.</p>
+          <a class="btn btn-secondary" href="georgian-bay-islands.html">Open the Georgian Bay Islands guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="ON" data-search="Point Pelee National Park Leamington Camp Henry oTENTik Wheatley birding">
+          <div class="pill-row"><span class="pill">Ontario</span></div>
+          <h3><a href="point-pelee.html">Point Pelee National Park</a></h3>
+          <p>The only overnight option we confirmed is Camp Henry, a walk-in oTENTik site. For tents and RVs, Wheatley Provincial Park is the legal backup.</p>
+          <a class="btn btn-secondary" href="point-pelee.html">Open the Point Pelee guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="ON" data-search="Pukaskwa National Park Marathon Hattie Cove Lake Superior Neys White Lake">
+          <div class="pill-row"><span class="pill">Ontario</span></div>
+          <h3><a href="pukaskwa.html">Pukaskwa National Park</a></h3>
+          <p>Parks Canada says Hattie Cove campsites are first-come; only the oTENTiks are reservable. Neys and White Lake provincial parks are backups.</p>
+          <a class="btn btn-secondary" href="pukaskwa.html">Open the Pukaskwa guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="ON" data-search="Thousand Islands National Park Mallorytown Landing St. Lawrence Gananoque Brockville Charleston Lake island camping kayak">
+          <div class="pill-row"><span class="pill">Ontario</span></div>
+          <h3><a href="thousand-islands.html">Thousand Islands National Park</a></h3>
+          <p>Island camping is boat-only, with 28 reservable and 32 first-come sites. The mainland has only oTENTiks. Charleston Lake Provincial Park is the land backup.</p>
+          <a class="btn btn-secondary" href="thousand-islands.html">Open the Thousand Islands guide</a>
         </article>
       </div>
       <p class="no-results callout" id="no-results">No parks match that search. Clear the search box or choose “All of Canada”.</p>
