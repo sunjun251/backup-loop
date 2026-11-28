@@ -92,7 +92,7 @@
   </section>
   <main id="main">
     <section class="section wrap" id="parks">
-      <p class="kicker">28 park guides</p>
+      <p class="kicker">42 park guides</p>
       <h2>Find the park you meant to book</h2>
       <p>Search by park, town or campground name, or filter by province or territory. Each guide lists what Parks Canada says about in-park camping, then legal backups nearby, with links to the official pages.</p>
       <form class="filter-bar" role="search" onsubmit="return false">
@@ -102,11 +102,11 @@
         </div>
         <div>
           <label for="park-province">Province or territory</label>
-          <select id="park-province"><option value="">All of Canada</option><option value="BC">British Columbia</option><option value="AB">Alberta</option><option value="SK">Saskatchewan</option><option value="MB">Manitoba</option><option value="ON">Ontario</option><option value="QC">Quebec</option><option value="NB">New Brunswick</option><option value="NS">Nova Scotia</option><option value="PE">Prince Edward Island</option><option value="NL">Newfoundland and Labrador</option></select>
+          <select id="park-province"><option value="">All of Canada</option><option value="BC">British Columbia</option><option value="AB">Alberta</option><option value="SK">Saskatchewan</option><option value="MB">Manitoba</option><option value="ON">Ontario</option><option value="QC">Quebec</option><option value="NB">New Brunswick</option><option value="NS">Nova Scotia</option><option value="PE">Prince Edward Island</option><option value="NL">Newfoundland and Labrador</option><option value="YT">Yukon</option><option value="NT">Northwest Territories</option><option value="NU">Nunavut</option></select>
         </div>
       </form>
-      <ul class="province-jump" aria-label="Jump to a province"><li><a href="index.html?prov=BC#parks">British Columbia</a></li><li><a href="index.html?prov=AB#parks">Alberta</a></li><li><a href="index.html?prov=SK#parks">Saskatchewan</a></li><li><a href="index.html?prov=MB#parks">Manitoba</a></li><li><a href="index.html?prov=ON#parks">Ontario</a></li><li><a href="index.html?prov=QC#parks">Quebec</a></li><li><a href="index.html?prov=NB#parks">New Brunswick</a></li><li><a href="index.html?prov=NS#parks">Nova Scotia</a></li><li><a href="index.html?prov=PE#parks">Prince Edward Island</a></li><li><a href="index.html?prov=NL#parks">Newfoundland and Labrador</a></li></ul>
-      <p class="filter-status" id="filter-status" aria-live="polite">28 parks</p>
+      <ul class="province-jump" aria-label="Jump to a province"><li><a href="index.html?prov=BC#parks">British Columbia</a></li><li><a href="index.html?prov=AB#parks">Alberta</a></li><li><a href="index.html?prov=SK#parks">Saskatchewan</a></li><li><a href="index.html?prov=MB#parks">Manitoba</a></li><li><a href="index.html?prov=ON#parks">Ontario</a></li><li><a href="index.html?prov=QC#parks">Quebec</a></li><li><a href="index.html?prov=NB#parks">New Brunswick</a></li><li><a href="index.html?prov=NS#parks">Nova Scotia</a></li><li><a href="index.html?prov=PE#parks">Prince Edward Island</a></li><li><a href="index.html?prov=NL#parks">Newfoundland and Labrador</a></li><li><a href="index.html?prov=YT#parks">Yukon</a></li><li><a href="index.html?prov=NT#parks">Northwest Territories</a></li><li><a href="index.html?prov=NU#parks">Nunavut</a></li></ul>
+      <p class="filter-status" id="filter-status" aria-live="polite">42 parks</p>
       <div class="card-grid park-grid">
         <article class="card park-card" data-park data-prov="BC" data-search="Glacier National Park Rogers Pass Illecillewaet Loop Brook Golden Revelstoke">
           <div class="pill-row"><span class="pill">British Columbia</span></div>
@@ -185,6 +185,12 @@
           <h3><a href="riding-mountain.html">Riding Mountain National Park</a></h3>
           <p>Wasagaming has 446 reservable sites. When it is full, Parks Canada lists four self-registration, first-come campgrounds: Moon Lake, Lake Audy, Whirlpool Lake and Deep Lake.</p>
           <a class="btn btn-secondary" href="riding-mountain.html">Open the Riding Mountain guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="MB" data-search="Wapusk National Park Churchill polar bears Hudson Bay">
+          <div class="pill-row"><span class="pill">Manitoba</span><span class="pill pill-muted">Remote</span></div>
+          <h3><a href="wapusk.html">Wapusk National Park</a></h3>
+          <p>No drive-in campground. Parks Canada says Churchill, 1,400 km northeast of Winnipeg, is the gateway community.</p>
+          <a class="btn btn-secondary" href="wapusk.html">Open the Wapusk guide</a>
         </article>
         <article class="card park-card" data-park data-prov="ON" data-search="Bruce Peninsula National Park Tobermory Cyprus Lake Grotto Flowerpot Fathom Five Sauble MacGregor">
           <div class="pill-row"><span class="pill">Ontario</span></div>
@@ -275,6 +281,84 @@
           <h3><a href="terra-nova.html">Terra Nova National Park</a></h3>
           <p>Newman Sound and Malady Head are the campgrounds, with long-term Newman Sound loops booked a day earlier. Lockston Path and Notre Dame provincial parks are backups.</p>
           <a class="btn btn-secondary" href="terra-nova.html">Open the Terra Nova guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="NL" data-search="Torngat Mountains National Park Labrador Nain Saglek Goose Bay base camp">
+          <div class="pill-row"><span class="pill">Newfoundland and Labrador</span><span class="pill pill-muted">Remote</span></div>
+          <h3><a href="torngat-mountains.html">Torngat Mountains National Park</a></h3>
+          <p>No drive-in campground. Parks Canada says the Torngat Mountains Base Camp, next to the park’s southern boundary, offers packaged trips with flights from Goose Bay to Saglek.</p>
+          <a class="btn btn-secondary" href="torngat-mountains.html">Open the Torngat Mountains guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="YT" data-search="Ivvavik National Park Inuvik Firth River Yukon North Slope">
+          <div class="pill-row"><span class="pill">Yukon</span><span class="pill pill-muted">Remote</span></div>
+          <h3><a href="ivvavik.html">Ivvavik National Park</a></h3>
+          <p>No drive-in campground. Parks Canada says trips begin in Inuvik, Northwest Territories, where aircraft charter companies serve the region.</p>
+          <a class="btn btn-secondary" href="ivvavik.html">Open the Ivvavik guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="YT" data-search="Kluane National Park and Reserve Haines Junction Kathleen Lake Pine Lake Congdon Creek Alaska Highway Haines Road">
+          <div class="pill-row"><span class="pill">Yukon</span><span class="pill pill-muted">Park reserve</span></div>
+          <h3><a href="kluane.html">Kluane National Park and Reserve</a></h3>
+          <p>Kathleen Lake has 38 sites, only some reservable. Yukon’s Pine Lake Campground near Haines Junction is the next legal option, though Yukon warns it is often full on weekends.</p>
+          <a class="btn btn-secondary" href="kluane.html">Open the Kluane guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="YT" data-search="Vuntut National Park Old Crow Porcupine River">
+          <div class="pill-row"><span class="pill">Yukon</span><span class="pill pill-muted">Remote</span></div>
+          <h3><a href="vuntut.html">Vuntut National Park</a></h3>
+          <p>No drive-in campground. Parks Canada says the park is about 50 km by air or 190 km by river north of Old Crow, which has scheduled air service.</p>
+          <a class="btn btn-secondary" href="vuntut.html">Open the Vuntut guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="NT" data-search="Aulavik National Park Banks Island Sachs Harbour Inuvik Thomsen River">
+          <div class="pill-row"><span class="pill">Northwest Territories</span><span class="pill pill-muted">Remote</span></div>
+          <h3><a href="aulavik.html">Aulavik National Park</a></h3>
+          <p>No drive-in campground. Parks Canada says chartering an aircraft from Inuvik is the most common way to reach the park.</p>
+          <a class="btn btn-secondary" href="aulavik.html">Open the Aulavik guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="NT" data-search="Nahanni National Park Reserve Fort Simpson Nahanni Butte Virginia Falls South Nahanni River">
+          <div class="pill-row"><span class="pill">Northwest Territories</span><span class="pill pill-muted">Remote</span><span class="pill pill-muted">Park reserve</span></div>
+          <h3><a href="nahanni.html">Nahanni National Park Reserve</a></h3>
+          <p>No drive-in campground. Parks Canada says there are no public roads in the reserve and most visitors arrive by chartered floatplane from communities such as Fort Simpson.</p>
+          <a class="btn btn-secondary" href="nahanni.html">Open the Nahanni guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="NT" data-search="Tuktut Nogait National Park Paulatuk Inuvik Hornaday River">
+          <div class="pill-row"><span class="pill">Northwest Territories</span><span class="pill pill-muted">Remote</span></div>
+          <h3><a href="tuktut-nogait.html">Tuktut Nogait National Park</a></h3>
+          <p>No drive-in campground. Parks Canada says air charters are available to Paulatuk from Inuvik, and charter floatplanes can reach several lakes in the park.</p>
+          <a class="btn btn-secondary" href="tuktut-nogait.html">Open the Tuktut Nogait guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="NT AB" data-search="Wood Buffalo National Park Fort Smith Fort Chipewyan Pine Lake Queen Elizabeth bison Hay River">
+          <div class="pill-row"><span class="pill">Northwest Territories</span><span class="pill">Alberta</span></div>
+          <h3><a href="wood-buffalo.html">Wood Buffalo National Park</a></h3>
+          <p>Pine Lake, 60 km south of Fort Smith, has both reservable and first-come sites. Queen Elizabeth Territorial Park in Fort Smith is the territorial backup.</p>
+          <a class="btn btn-secondary" href="wood-buffalo.html">Open the Wood Buffalo guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="NU" data-search="Auyuittuq National Park Baffin Island Pangnirtung Qikiqtarjuaq Akshayuk Pass">
+          <div class="pill-row"><span class="pill">Nunavut</span><span class="pill pill-muted">Remote</span></div>
+          <h3><a href="auyuittuq.html">Auyuittuq National Park</a></h3>
+          <p>No drive-in campground. Parks Canada says commercial flights serve Pangnirtung and Qikiqtarjuaq year-round, and the park is reached by boat or snowmobile with a local outfitter.</p>
+          <a class="btn btn-secondary" href="auyuittuq.html">Open the Auyuittuq guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="NU" data-search="Qausuittuq National Park Bathurst Island Resolute Bay Peary caribou">
+          <div class="pill-row"><span class="pill">Nunavut</span><span class="pill pill-muted">Remote</span></div>
+          <h3><a href="qausuittuq.html">Qausuittuq National Park</a></h3>
+          <p>No drive-in campground. Parks Canada says the park is on Bathurst Island, 200 km northwest of Resolute Bay, and only reachable by chartered aircraft, best from late June to early August.</p>
+          <a class="btn btn-secondary" href="qausuittuq.html">Open the Qausuittuq guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="NU" data-search="Quttinirpaaq National Park Ellesmere Island Resolute Grise Fiord">
+          <div class="pill-row"><span class="pill">Nunavut</span><span class="pill pill-muted">Remote</span></div>
+          <h3><a href="quttinirpaaq.html">Quttinirpaaq National Park</a></h3>
+          <p>No drive-in campground. Parks Canada says the park is on Ellesmere Island, 800 km north of Resolute Bay, and is most easily reached by chartered aircraft.</p>
+          <a class="btn btn-secondary" href="quttinirpaaq.html">Open the Quttinirpaaq guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="NU" data-search="Sirmilik National Park Pond Inlet Arctic Bay Bylot Island">
+          <div class="pill-row"><span class="pill">Nunavut</span><span class="pill pill-muted">Remote</span></div>
+          <h3><a href="sirmilik.html">Sirmilik National Park</a></h3>
+          <p>No drive-in campground. Parks Canada says the park is next to Pond Inlet and Arctic Bay, which have year-round commercial flights, and is reached by boat or snowmobile with a licensed outfitter.</p>
+          <a class="btn btn-secondary" href="sirmilik.html">Open the Sirmilik guide</a>
+        </article>
+        <article class="card park-card" data-park data-prov="NU" data-search="Ukkusiksalik National Park Naujaat Baker Lake Rankin Inlet Wager Bay Kivalliq">
+          <div class="pill-row"><span class="pill">Nunavut</span><span class="pill pill-muted">Remote</span></div>
+          <h3><a href="ukkusiksalik.html">Ukkusiksalik National Park</a></h3>
+          <p>No drive-in campground. Parks Canada says commercial flights serve Naujaat, Baker Lake, Rankin Inlet, Chesterfield Inlet and Coral Harbour year-round.</p>
+          <a class="btn btn-secondary" href="ukkusiksalik.html">Open the Ukkusiksalik guide</a>
         </article>
       </div>
       <p class="no-results callout" id="no-results">No parks match that search. Clear the search box or choose “All of Canada”.</p>
